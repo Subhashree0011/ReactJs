@@ -1,24 +1,10 @@
-import { useState } from 'react'
+import React from 'react'
 
-import './app.css'
-
-import Card from './Components/Card'
-
-function App() {
-  
-  let [counter,setCounter]=useState(15)
-
-  const addValue=()=>{
-    console.log("clicked", counter);
-    counter=counter+1;
-    setCounter(counter)
-  }
-
-  return (
-   <>
-   <h1 className="bg-blue-800  p-4"  >Coding is important</h1>
-
-   <figure class="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
+function Card(username){
+    console.log(username);
+    return(
+        
+        <figure class="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
   <img class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" width="384" height="512"></img>
   <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
     <blockquote>
@@ -38,24 +24,13 @@ function App() {
     </figcaption>
   </div>
 </figure>
+       
 
-
-
- {/* <h2>Counter value :{counter}</h2>
-
-   <button onClick={addValue}>Add value</button>
-   <br/>
-   <button>Remove value</button> */}
-
-
-   <Card username ="Subhashree"/>
-   <Card/>
-
-
-
-   </>
     
-  )
+        
+        
+    )
 }
 
-export default App
+export default Card
+
